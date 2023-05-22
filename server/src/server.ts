@@ -1,19 +1,19 @@
-import fastify from 'fastify';
-import cors from '@fastify/cors';
-import { memoriesRoutes } from './routes/memories';
+import fastify from 'fastify'
+import cors from '@fastify/cors'
+import { memoriesRoutes } from './routes/memories'
 
-const app = fastify();
+const app = fastify()
 
 app.register(cors, {
-  origin: true
-});
+  origin: true,
+})
 
-app.register(memoriesRoutes);
+app.register(memoriesRoutes)
 
 app
   .listen({
-    port: 3333
+    port: 3333,
   })
   .then(() => {
-    console.log('🔥Servidor rodando http://localhost:3333');
-  });
+    console.log('🚀 HTTP server running on port http://localhost:3333')
+  })
